@@ -1,7 +1,6 @@
-const decimalCounter = value => {
+const decimalCounter = (value) => {
   return Number.isInteger(value) ? 0 : value.toString().split(".")[1]?.length || 0;
 };
-
 
 const formatItem = ({
   id,
@@ -13,7 +12,8 @@ const formatItem = ({
   shipping,
   address,
   sold_quantity,
-  category_id
+  category_id,
+  picture // Campo adicional para imágenes de mayor resolución
 }) => {
   return {
     id,
@@ -22,13 +22,13 @@ const formatItem = ({
     price: {
       currency: currency_id,
       amount: price,
-      decimals: decimalCounter(price)
+      decimals: decimalCounter(price),
     },
-    picture: thumbnail,
+    picture: picture || thumbnail, // Usa la imagen grande si está disponible
     free_shipping: shipping.free_shipping,
     address: address ? address.state_name : null,
     sold_quantity,
-    category_id
+    category_id,
   };
 };
 
@@ -36,12 +36,12 @@ const formatResponse = (items, categories) => {
   return {
     author: {
       name: "Juan",
-      lastname: "Trejo"
+      lastname: "Trejo",
     },
     categories: categories
-      ? categories.values[0].path_from_root.map(category => category.name)
+      ? categories.values[0].path_from_root.map((category) => category.name)
       : [],
-    items: items.slice(0, 4).map(item => formatItem(item))
+    items: items.slice(0, 4).map((item) => formatItem(item)),
   };
 };
 
