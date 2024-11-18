@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { setItems, setSearch, clearCategories } from "../redux/settings/actions"; // Importa clearCategories
+import { setItems, setSearch, clearCategories } from "../redux/settings/actions";
 import { URL_API } from "../common/constants";
 import searchIcon from "../assets/images/not-found.svg";
 import { TailSpin } from "react-loader-spinner";

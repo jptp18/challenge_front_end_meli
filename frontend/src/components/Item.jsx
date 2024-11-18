@@ -7,7 +7,6 @@ import shipping from "../assets/images/ic_shipping.png";
 import { formatPrice } from "../common/utils";
 
 const Item = ({ item }) => {
-  console.log(item);
   
   const dispatch = useDispatch();
   const navigate = useNavigate();
