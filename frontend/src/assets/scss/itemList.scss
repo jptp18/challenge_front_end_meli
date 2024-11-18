@@ -1,0 +1,21 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+
+  .search-initial-text{
+    margin-left: 1rem;
+    font-size: 30px;
+    font-weight: 600;
+    color: #333333;
+  }
+
+}
+
+
+@media (max-width: 26rem) {
+  .search-initial-text{
+    text-align: center;
+  }
+}

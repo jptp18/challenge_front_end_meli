@@ -1,0 +1,90 @@
+@import "variables";
+
+header {
+  background-color: $yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: header;
+}
+
+nav {
+  width: auto;
+  display: flex;
+  padding: 2rem;
+  width: 70%;
+  justify-content: center;
+  padding: 0;
+
+  img {
+    align-self: center;
+  }
+}
+
+
+.logo-link-container{
+  display: flex;
+  align-items: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+input:-webkit-autofill {
+  appearance: none !important;
+  background-color: #EEEEEE !important;
+  color: black !important;
+  box-shadow:  0 0 0px 1000px white inset !important;
+  border: 1px solid #EEEEEE !important; 
+}
+
+.search-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.search-input {
+  width: 100%;
+  height: 2rem;
+  border-radius: 4px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 1.1rem;
+  border: 1px solid $light-gray;
+  color: $dark-gray;
+  padding: 0.2rem;
+  padding-left: 1rem;
+  margin-left: 1rem;
+}
+
+.search-button {
+  background: $light-gray;
+  border: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-size: 22px;
+  color: $gray;
+  width: 5%;
+  cursor: pointer;
+  background-image: url("../images/ic_Search.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+@media (max-width: 26rem) {
+  nav {
+    width: auto;
+  }
+
+  .search-button {
+    width: 3rem;
+  }
+
+  .main-container{
+    flex-direction: column;
+  }
+
+}
