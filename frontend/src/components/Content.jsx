@@ -11,7 +11,7 @@ const Content = ({ children }) => {
     location.pathname !== "/" && Array.isArray(categories) && categories.length > 0;
 
   useEffect(() => {
-    console.log("Location changed:", location.pathname);
+    console.log("Location changed:");
   }, [location]);
 
   return (

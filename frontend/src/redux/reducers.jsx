@@ -23,8 +23,8 @@ export default function (state = initialState, action) {
       return { ...state, search: text };
     }
     case SET_ITEMS: {
-      const { items = [], categories = [] } = action.payload; // Aseguramos que sea un array
-      const noDataItems = items.length === 0; // Puede simplificarse de esta forma
+      const { items = [], categories = [] } = action.payload;
+      const noDataItems = items.length === 0; 
       return { ...state, items, categories, noDataItems };
     }
     case SET_ITEM: {
@@ -32,7 +32,7 @@ export default function (state = initialState, action) {
       return { ...state, selectedItem };
     }
     case CLEAR_ITEMS: {
-      return { ...state, items: [], categories: [], noDataItems: false }; // También restablecemos noDataItems
+      return { ...state, items: [], categories: [], noDataItems: false }; 
     }
     case CLEAR_SEARCH_FIELD: {
       return { ...state, search: "" };
