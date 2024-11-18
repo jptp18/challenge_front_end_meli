@@ -1,5 +1,5 @@
 import React from 'react';
-import searchIcon from "../assets/images/not-found.svg";
+import searchIcon from "../assets/images/search-icon.svg";
 
 const InitialSearch = () => {
   return (

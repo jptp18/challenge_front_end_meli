@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
 import logo from "../assets/images/Logo_ML.png";
-import { setSearch, setItems } from "../redux/settings/actions";
+import { setSearch } from "../redux/settings/actions";
 import "../assets/scss/header.scss";
 import { LANG_ES } from "../common/constants";
 
@@ -35,8 +35,9 @@ const Header = () => {
             className="search-input"
             value={searchField}
             onChange={handleChange}
+            aria-label="Buscar productos"
           />
-          <button type="submit" className="search-button"></button>
+          <button type="submit" className="search-button" aria-label="Botón buscar"></button>
         </form>
       </nav>
     </header>
