@@ -80,15 +80,6 @@
 }
 
 @media (max-width: 50rem) {
-  .item-detail {
-    grid-template-columns: 32% auto;
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas:
-      "image image image "
-      "info info info"
-      "description description description";
-  }
-
   .item-detail__info {
     margin: 0 1rem;
   }
@@ -108,7 +99,7 @@
 
 }
 
-/* Asegúrate de que el popup esté centrado en la pantalla */
+
 .popUpCartAdded {
   position: fixed;
   top: 0;
@@ -122,7 +113,7 @@
   z-index: 9999;
 }
 
-/* Contenedor de la imagen */
+
 .cartItemCart_container {
   box-sizing: border-box;
   border: 3px solid #00a650;
@@ -137,7 +128,6 @@
   position: relative;
 }
 
-/* Icono de cierre */
 .cartCheckicon_container {
   position: absolute;
   top: 53%;
@@ -154,11 +144,29 @@
 
 .popUpContent_container{
   background-color: white;
-    width: 300px;
-    height: 300px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 6px;
+}
+
+@media (max-width: 40rem) {
+  .cartCheckicon_container{
+    right: 36%;
+  }
+
+  .item-detail{
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    border-radius: 6px;
+  }
+
+  .item-detail__description{
+    p{
+      padding: 0 5px;
+    }
+  }
+
 }
