@@ -1,5 +1,6 @@
 import React from 'react'
 
+//Popup añadido para cuando se hace click en el botón comprar
 const Popup = ({item}) => {
   return (
     <div className="popUpCartAdded">
